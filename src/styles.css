@@ -1,0 +1,138 @@
+:root {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #e7f0e9;
+  background: #0b100d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 20% 10%, rgb(55 115 78 / 0.2), transparent 35%),
+    #0b100d;
+}
+
+.demo {
+  width: min(100%, 760px);
+  padding: clamp(28px, 7vw, 72px);
+  border: 1px solid #27372d;
+  border-radius: 24px;
+  background: rgb(17 26 20 / 0.88);
+  box-shadow: 0 28px 90px rgb(0 0 0 / 0.32);
+}
+
+.eyebrow {
+  margin: 0;
+  color: #8ce1a4;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 28px 0 0;
+  color: #f3f8f3;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.4rem, 8vw, 5.8rem);
+  letter-spacing: -0.08em;
+  line-height: 0.95;
+}
+
+.intro {
+  max-width: 48ch;
+  margin: 28px 0 0;
+  color: #afbeb3;
+  line-height: 1.7;
+}
+
+.controls {
+  margin-top: 56px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #afbeb3;
+  font-size: 0.8rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.timing-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.field label {
+  margin-bottom: 8px;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #3b5243;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #f3f8f3;
+  background: #0d150f;
+  outline: none;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #8ce1a4;
+  outline-offset: 3px;
+}
+
+button {
+  border: 1px solid #8ce1a4;
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #071009;
+  background: #8ce1a4;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 560px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  .timing-controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
