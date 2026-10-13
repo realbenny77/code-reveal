@@ -4,6 +4,10 @@ A small React component that transforms code-like gibberish into readable text.
 
 Created by **B.A.D BENNY**.
 
+## Demo
+
+[Try Code Reveal live](https://realbenny77.github.io/code-reveal/)
+
 ## Run locally
 
 ```bash
